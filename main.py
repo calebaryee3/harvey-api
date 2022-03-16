@@ -9,6 +9,9 @@ import random
 app = Flask(__name__)
 api = Api(app)
 data=json.load(open('Harvey.json'))
+@app.route("/")
+def main():
+    return "<h1> Harvey Specter quotes API </h1>"
 
 class Harvey(Resource):
     # methods go here
